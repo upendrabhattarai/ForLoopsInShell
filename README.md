@@ -1,10 +1,13 @@
-# Crash Course in Command Line Basics
+# Crash Course for Loops in the Shell
 
 ## Objectives
 
-- Explain the importance of learning the command line.
-- Navigate the file system using the command line.
-- Learn the basics of working with files and folders.
+    - Learn the concept of Loops.
+    - Write a for loop to execute one or more commands for each item in a set.
+
+Loops are a programming construct that allows us to repeat a command or multiple commands for each item in a list. 
+- 
+
   
 ---
 
