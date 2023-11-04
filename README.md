@@ -5,26 +5,25 @@
     - Learn the concept of Loops.
     - Write for loops to execute one or more commands.
     
-Loops are a programming construct that allows us to repeat a command or a set of commands for each item in a list. Most languages have the concept of loops and they help us to automate repetitive tasks so that we don't have to type in the code multiple times.
+Loops are a programming construct that allows us to execute a block of code repeatedly over multiple items. Most languages have the concept of loops and they help us to automate repetitive tasks so that we don't have to type in the code multiple times.
 
 ---
-## Structure or Syntax of For loop
+## Syntax of For loop
+
+The structure or the syntax of for loop in bash is as follows:
 
 ```bash
-for variable in list_of_items
-do
-    command_1 $variable
-    command_2 $variable
-    ...
+for <variable> in <list>
+    do
+        <block of code>
 done
 ```
 
-As we said loops are the programming construct, let's look at how they are constructed. In the above example, text that appears bold: `for`, `in`, `do`, and `done` form the backbone of the for loop. They remain constant no matter how big or complex your loop construct might be. For loop always start with `for` command then you need to define a variable name, then comes `in` followed by a list of elements in that variable. After that comes `do` and then comes your command, whatever command you want to iterate over those items/elements in that variable. When you input your complete command you have to type done so that the for loop understands that you are done with your command so it will execute the commands. So there are basically three steps here, first you define a variable with for and in command, then comes your command block starting with do, and finally with done you have to tell the shell that you are done with the loop.
+The texts in bold form the backbone of the `for loop` construct and remain constant, no matter, how big or complex your loop construct is. You will need to have the words: `for`, `in`, `do`, and `done` in this order. Other texts that go in between those words change depending on what you want your loop to do. The `<variable>` is a name that will be used to represent each item in the `<list>`. The `<list>` can be a list of numbers, strings, or files. The `<block of code>` is the set of codes you want to execute for each item in the `<list>`.
+
 
 ## How do loops work?
 Let's work through an example to see what goes through in a loop command.
-For example:
-Let's take a variable called `numbers` and items in this `numbers` variable are `1 2 3 4`. What we want to do is to display each item in the numbers variable on our screen. We can use the `echo` command.
 
 ```bash
 for numbers in 1 2 3 4
@@ -32,6 +31,10 @@ do
     echo $numbers
 done
 ```
+
+Let's take a variable called `numbers` and items in the list represented by the `numbers` variable are `1 2 3 4`. Our block of code contains `echo $numbers` which basically prints out each item in the `numbers` variable. 
+
+
 
 |Loop component                    | Value  |
 |----------------------------------|--------|
