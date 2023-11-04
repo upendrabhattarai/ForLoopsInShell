@@ -13,12 +13,18 @@ Loops are a programming construct that allows us to repeat a command or a set of
 ```bash
 for variable in list_of_items
 do
-    <command_1 $variable>
-    <command_2 $variable>
+    command_1 $variable
+    command_2 $variable
     ...
 done
 ```
-For example: 
+
+As we said loops are the programming construct, lets look at how they are constructed. In the above example, text that appears bold: `for`, `in`, `do`, `done` is the parts of the loop structure form the backbone of the for loop. They remain constant no matter how big or complex your command might be. For loop always start with `for` command then you need to define a variable name. Variable names can be anything then comes `in` followed by a list of elements in that variable. After that comes do and then comes your command, whatever command you want to iterate over those items/elements in that variable. When you input your complete command you have to type done so that the for loop understands that you are done with your command so it will execute the commands. So there are basically three steps here, first you define a variable with for and in command, then comes your command block starting with do, and finally with done you have to tell the shell that you are done with the loop.
+
+## How do loops work?
+Lets work through an example to see what goes through in a loop 
+For example:
+Let's take a variable called `numbers` and items in this `numbers` variable are `0 1 2 3 4 5 6 7 8 9`. What we want to do is to display each item in the numbers variable on our screen. We can use the `echo` command.
 
 ```bash
 for numbers in 0 1 2 3 4 5 6 7 8 9
@@ -26,6 +32,25 @@ do
     echo $numbers
 done
 ```
+
+Let's add more to the `echo` command
+
+```bash
+for numbers in 0 1 2 3 4 5 6 7 8 9
+do
+    echo Looping for $numbers
+done
+```
+As we mentioned earlier, We can use multiple commands inside the loop not just one command. So for in the above example we have used a single command `echo`. Lets add more command and see how it works.
+
+```bash
+for numbers in 0 1 2 3 4 5 6 7 8 9
+do
+    echo Looping for $numbers
+    sleep 1
+done
+```
+
 
 If we want to repeat a task 10/20 times, we don't want to have to type in the code 10/20 times, with maybe a slight change each time.
 
