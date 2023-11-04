@@ -1,11 +1,36 @@
-# Crash Course for Loops in the Shell
+# Crash Course on For Loops in the Shell
 
 ## Objectives
 
     - Learn the concept of Loops.
     - Write a for loop to execute one or more commands for each item in a set.
     
-Loops are a programming construct that allows us to repeat a command or multiple commands for each item in a list. 
+Loops are a programming construct that allows us to repeat a command or a set of commands for each item in a list. Most languages have the concept of loops and they help us to automate repetitive tasks so that we don't have to type in the code multiple times.
+
+---
+## Structure or Syntax of For loop
+
+```bash
+for variable in list_of_items
+do
+    <command_1 $variable>
+    <command_2 $variable>
+    ...
+done
+```
+For example: 
+
+```bash
+for numbers in 0 1 2 3 4 5 6 7 8 9
+do
+    echo $numbers
+done
+```
+
+If we want to repeat a task 10/20 times, we don't want to have to type in the code 10/20 times, with maybe a slight change each time.
+
+
+For example, if we need to run a set of commands for multiple files As such they can automate the process
 
   
 ---
