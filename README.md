@@ -4,13 +4,10 @@
 
 - To describe the concept of Loops.
 
-  
 - To automate a task by using a for loop in a shell.
-  <details>
-    <summary>•</summary>
-    To demonstrate the fundamentals and encourage you all to explore more.
   
-  </details>
+- To demonstrate the fundamentals and encourage you all to explore more.
+  
 
 Loops are a programming construct that allows us to execute a block of code repeatedly over multiple items. Most languages have the concept of loops and they help us to automate repetitive tasks so that we don't have to type in the code multiple times.
 
@@ -48,14 +45,41 @@ done
 Here our variable is called `numbers` and items in the list represented by the `numbers` variable are `1 2 3 4`. Our block of code contains `echo $numbers` which basically prints out each item in the `numbers` variable. 
 In this example, we have this for loop written in multiple lines with some indentation for readability however it can also be written in a single line or without indentation. You might notice that when you start for loop and press enter after the first line, the second line starts `>` sign rather than the regular command prompt `$`. This simply means that the shell is awaiting further commands to complete it. 
 
+
+## Challenge 1
+Using multiple commands in a loop. Let's echo the numbers 1-4 as above but with a delay of 1 second in between each number.
+
+<details>
+    <summary>::::Hint::::</summary>
+
+`sleep` command suspends execution for an interval of time.
+
+usage: sleep [seconds]
+
+eg. `sleep 1` for 1 second delay.
+
+</details>
+
+<details>
+    <summary>::::Solution::::</summary>
+
+```bash
+for numbers in 1 2 3 4
+do
+    echo $numbers
+    sleep 1
+done
+```
+</details>
+
 ---
 ## Examples
 Let's create some files using for loop. We can use `touch` command to create empty files.
 
 ```bash
-for files in 1.txt 2.txt 3.txt 
+for numbers in 1 2 3 4
 do
-    touch $files
+    touch ${numbers}.txt
 done
 ```
 You can type `ls` to display the output of the above `for loop`.
