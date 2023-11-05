@@ -7,7 +7,7 @@
   
 - To write for loops to execute one or more commands.
 <details>
-  <summary></summary>
+  <summary>-</summary>
 
 - To demonstrate the fundamentals and encourage you all to explore more.
 </details>
