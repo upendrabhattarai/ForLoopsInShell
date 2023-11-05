@@ -1,54 +1,54 @@
 # For Loops in the Shell
 
-## Objectives
+## **Objectives**
 
-- To describe the concept of Loops.
+- Understand the concept of Loops in shell scripting.
 
-- To automate a task by using a for loop in a shell.
+- Learn how to automate tasks using for loops.
   
-- To demonstrate the fundamentals and encourage you all to explore more.
-  
-
-Loops are a programming construct that allows us to execute a block of code repeatedly over multiple items. Most languages have the concept of loops and they help us to automate repetitive tasks so that we don't have to type in the code multiple times.
+- Explore the fundamentals and encourage further exploration.
 
 ---
 
-## Syntax of For loop
+Loops are a powerful programming construct that allows us to execute a block of code repeatedly over a set of items. Most programming languages support loops, and they are essential for automating repetitive tasks, eliminating the need to duplicate code.
 
+---
+
+## **Syntax of For loop**
+
+In shell scripting, a for loop follows a specific structure:
 ```bash
 for <variable> in <list>
     do
         <block of code>
 done
 ```
-
-The syntax of the `for loop` follows a structured flow statement. The texts in bold form the backbone of the `for loop` construct and remain constant, no matter, how big or complex your loop is. You need to have these keywords: `for`, `in`, `do`, and `done` in this order. Other texts that go in between change depending on what you want your loop to do. The `<variable>` is a name that will be used to represent each item in the `<list>`. The `<list>` can be a list of numbers, strings, or files. The `<block of code>` is the set of codes you want to execute for each item in the `<list>`.
+- The keywords `for`, `in`, `do`, and `done` are essential components of the for loop.
+- `<variable` represents each item in the `<list>`/
+- `<list>` can be numbers, strings, or files.
+- `<block of code>` consists of the commands to be executed for each item in the `<list>`.
 
 ---
 
-## How do loops work?
-Let's work through an example to see what goes through in a loop command.
+## How Do Loops Work?
+Let's walk through an example:
 
 ```bash
 for numbers in 1 2 3 4
-do
+  do
     echo $numbers
 done
 ```
 
-|Loop component                    | Value  |
-|----------------------------------|--------|
-|variable_name                     | number |
-|list                              | 1 2 3 4|
-|body (command(s) to be executed)  | echo   |
+- `numbers` is the variable.
+- The list  includes numbers 1, 2, 3, and 4.
+- The block of code prints each number using `echo`.
 
-Here our variable is called `numbers` and items in the list represented by the `numbers` variable are `1 2 3 4`. Our block of code contains `echo $numbers` which basically prints out each item in the `numbers` variable. 
-In this example, we have this for loop written in multiple lines with some indentation for readability however it can also be written in a single line or without indentation. You might notice that when you start for loop and press enter after the first line, the second line starts `>` sign rather than the regular command prompt `$`. This simply means that the shell is awaiting further commands to complete it. 
+In this example, we have this for loop written in multiple lines with some indentation for readability however it can also be written in a single line or without indentation. You might notice that when you start for loop and press enter after the first line, the second line starts with the `>` sign rather than the regular command prompt `$`. This simply means that the shell is awaiting further commands to complete it. 
+---
 
-
-## Challenge 1
-Using multiple commands in a for loop.
-Let's echo the numbers 1-4 as in the above example but delay the execution of each iteration by 1 second.
+## **Challenge 1**
+Expand the block of code in the above for loop to echo the numbers ` 1-4`, adding a 1-second delay in each iteration.
 
 <details>
     <summary>::::Hint::::</summary>
@@ -71,15 +71,16 @@ do
     sleep 1
 done
 ```
-
-Note: `variable names` can be anything, you don't have to use `numbers` as a variable name for `1 2 3 4` as in the above two examples. You can replace this variable name: `numbers` with anything, eg: `x` or `i` or any other random letters, words, or even numbers. However, having a meaningful variable name will increase the interpretability of the codes.
-
 </details>
 
 
+Note: `variable names` can be anything, you don't have to use `numbers` as a variable name for `1 2 3 4` as in the above two examples. You can replace this variable name: `numbers` with anything, eg: `x` or `i` or any other random letters, words, or even numbers. However, having a meaningful variable name will increase the interpretability of the codes.
+
+
 ---
+
 ## Examples
-Let's create some files using for loop. We can use `touch` command to create empty files.
+1. Create empty files using the `touch` command.
 
 ```bash
 for numbers in 1 2 3 4             # for numbers in {1..4} does the same job
@@ -90,27 +91,28 @@ done
 You can type `ls` to display the output of the above `for loop`.
 
 
-## More examples
+2. Write text to files using the `echo` command.
 
-We can use `echo` command to write a file by redirecting the output to a file. 
 
 ```bash
 for files in 1.txt 2.txt 3.txt 4.txt
 do
-    echo This is a textfile $files > $files
+    echo "This is a textfile $files" > $files
 done
 ```
-You can use `less` command to read the text file.
+You can use the `less` command to read the text file.
+---
 
-## Challenge 2
-Rewrite the above loop using wild card `*` to list items for the variable and append a second line `This is created with for loop.`in each text file.
+
+## **Challenge 2**
+Rewrite the loop using the wild card `*` to list items for the variable and append a second line to each text file.
 
 <details>
     <summary>::::Hint::::</summary>
   
 wild card `*.txt` can specify all the files: 1.txt 2.txt 3.txt and 4.txt in our working directory.
 
-We can use `>` to direct the output from a command to a file. However, redirecting another output of a command to the same file will overwrite the file. So, in order to add a new output/content in the same file, we can use `>>` so the new content will append at the bottom of the text file.
+We can use `>` to direct the output from a command to a file. However, redirecting another output of a command to the same file will overwrite the content of the file. So, in order to add a new output/content in the same file, we can use `>>` so the new content will append at the bottom of the text file.
 
 </details>    
 
@@ -126,11 +128,10 @@ done
     
 </details>
 
-## Project 1
+## Project 1:
 
 ### Setup
-Create 4 fasta files: `file_1.fasta, file_2.fasta, file_3.fasta, file_4.fasta, file_5.fasta and file_6.fasta`
-insert the following sequences into each file.
+Create six fasta files: `file_1.fasta`, `file_2.fasta`, `file_3.fasta`, `file_4.fasta`, `file_5.fasta` and `file_6.fasta` and insert the following sequences into each file.
 
 ```
 >Sequence1
@@ -148,12 +149,7 @@ TAGCTAGCTAGCTAGCTAGCTATAGCTAGCTAGCTCTAGCTAGCTAGCTGCT
 for files in {1..6}
 do
 touch file_${files}.fasta
-echo ">Sequence1
-ACGTAGCTAGCTAGCTAGCTAGCTTAGCTAGCTAGAGCTAGCTAGCTGCTAGCT
->Sequence2
-GCTAGCTAGCTAGCTAGCTAGCTAGCTAGCAGCTAGCTTAGCTAGGCAGCTAG
->Sequence3
-TAGCTAGCTAGCTAGCTAGCTATAGCTAGCTAGCTCTAGCTAGCTAGCTGCT" > $files
+echo ">Sequence1\nACGTAGCTAGCTAGCTAGCTAGCTTAGCTAGCTAGAGCTAGCTAGCTGCTAGCT\n>Sequence2\nGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCAGCTAGCTTAGCTAGGCAGCTAG\n>Sequence3\nTAGCTAGCTAGCTAGCTAGCTATAGCTAGCTAGCTCTAGCTAGCTAGCTGCT" > $files
 done
 ```
 </details>
