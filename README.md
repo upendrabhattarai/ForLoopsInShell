@@ -6,15 +6,16 @@
 
   
 - To write for loops to execute one or more commands.
-<details>
-  <summary>•</summary>
-  To demonstrate the fundamentals and encourage you all to explore more.
+  <details>
+    <summary>•</summary>
+    To demonstrate the fundamentals and encourage you all to explore more.
   
   </details>
 
 Loops are a programming construct that allows us to execute a block of code repeatedly over multiple items. Most languages have the concept of loops and they help us to automate repetitive tasks so that we don't have to type in the code multiple times.
 
 ---
+
 ## Syntax of For loop
 
 ```bash
@@ -26,6 +27,7 @@ done
 
 The syntax of the `for loop` follows a structured flow statement. The texts in bold form the backbone of the `for loop` construct and remain constant, no matter, how big or complex your loop is. You need to have these keywords: `for`, `in`, `do`, and `done` in this order. Other texts that go in between change depending on what you want your loop to do. The `<variable>` is a name that will be used to represent each item in the `<list>`. The `<list>` can be a list of numbers, strings, or files. The `<block of code>` is the set of codes you want to execute for each item in the `<list>`.
 
+---
 
 ## How do loops work?
 Let's work through an example to see what goes through in a loop command.
@@ -37,17 +39,17 @@ do
 done
 ```
 
-Let's take a variable called `numbers` and items in the list represented by the `numbers` variable are `1 2 3 4`. Our block of code contains `echo $numbers` which basically prints out each item in the `numbers` variable. 
-
-
-
 |Loop component                    | Value  |
 |----------------------------------|--------|
 |variable_name                     | number |
 |list                              | 1 2 3 4|
 |body (command(s) to be executed)  | echo   |
 
+Here our variable is called `numbers` and items in the list represented by the `numbers` variable are `1 2 3 4`. Our block of code contains `echo $numbers` which basically prints out each item in the `numbers` variable. 
+In this example, we have this for loop written in multiple lines with some indentation for readability however it can also be written in a single line or without indentation. You might notice that when you start for loop and press enter after the first line, the second line starts `>` sign rather than the regular command prompt `$`. This simply means that the shell is awaiting further commands to complete it. 
 
+---
+## Examples
 Let's create some files using for loop. We can use `touch` command to create empty files.
 
 ```bash
@@ -56,8 +58,12 @@ do
     touch $files
 done
 ```
+You can type `ls` to display the output of the above `for loop`.
 
-We can use multiple commands inside the loop. So in the examples above, we used `echo` and `touch` commands separately in two different for loops. Let's use them together to write some file with text inside them.
+
+## Using multiple commands with the for loop
+
+We can also use multiple commands inside the loop. So in the examples above, we used `echo` and `touch` commands separately in two different for loops. Let's use them together to write some file with text inside them.
 
 ```bash
 for files in file-1.txt file-2.txt file-3.txt
@@ -97,33 +103,6 @@ For example, if we need to run a set of commands for multiple files As such they
 
   
 ---
-
-## Why learn to use the command line?
-
-<details>
-  <summary> Greater control</summary>
-
-While the Graphical user interface (GUI) of an operating system (OS) offers a user-friendly and visually appealing experience, the command line provides a way to access the system's backend. This grants you the ability to perform tasks that may not be readily achievable through the GUI. For instance, when encountering computer issues, the command line can be a valuable tool for checking error logs and running diagnostic tools. It also allows you to manage permissions, and user access, and execute complex tasks that might only be possible via the command line.
-
-
-
-</details>
-
-<details>
-  <summary> Speed and Efficiency</summary>
-  
-Despite its steep learning curve, the command line offers efficient and quick ways to navigate your system. For example, when dealing with hundreds or thousands of files that require processing through a pipeline, manually handling them through a GUI could take hours or even days. In contrast, the command line allows you to automate these repetitive tasks, reducing the likelihood of errors. You can also create aliases for frequently used commands to enhance speed and efficiency. This eliminates the need to switch back and forth between the mouse and keyboard, making command line work significantly more efficient in many respects.
-
-</details>
-
-
-
-<details>
-  <summary> Access remote servers</summary>
-
-When working with large datasets, such as high-throughput sequencing data, there are instances where your local PC may not have the processing capacity to handle the millions of sequencing reads effectively. In such situations, you often need to access high-performance computing clusters for enhanced computing power. This can be achieved through the command-line interface, allowing you to connect to remote servers and leverage their computational resources.
-    
-</details>
 
 
 
