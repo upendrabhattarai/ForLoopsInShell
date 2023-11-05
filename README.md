@@ -2,10 +2,10 @@
 
 ## Objectives
 
-- To learn the concept of Loops.
+- To describe the concept of Loops.
 
   
-- To write for loops to execute one or more commands.
+- To automate a task by using a for loop in a shell.
   <details>
     <summary>•</summary>
     To demonstrate the fundamentals and encourage you all to explore more.
