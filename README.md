@@ -9,15 +9,13 @@
 <details>
   <summary></summary>
 
-- To demonstrate the fundamentals and inspire participants to explore further.
+- To demonstrate the fundamentals and encourage you all to explore more.
 </details>
 
 Loops are a programming construct that allows us to execute a block of code repeatedly over multiple items. Most languages have the concept of loops and they help us to automate repetitive tasks so that we don't have to type in the code multiple times.
 
 ---
 ## Syntax of For loop
-
-The structure of for loop in bash is as follows:
 
 ```bash
 for <variable> in <list>
@@ -26,7 +24,7 @@ for <variable> in <list>
 done
 ```
 
-The texts in bold form the backbone of the `for loop` construct and remain constant, no matter, how big or complex your loop construct is. You will need to have the words: `for`, `in`, `do`, and `done` in this order. Other texts that go in between those words change depending on what you want your loop to do. The `<variable>` is a name that will be used to represent each item in the `<list>`. The `<list>` can be a list of numbers, strings, or files. The `<block of code>` is the set of codes you want to execute for each item in the `<list>`.
+The syntax of the `for loop` follows a structured flow statement. The texts in bold form the backbone of the `for loop` construct and remain constant, no matter, how big or complex your loop is. You need to have these keywords: `for`, `in`, `do`, and `done` in this order. Other texts that go in between change depending on what you want your loop to do. The `<variable>` is a name that will be used to represent each item in the `<list>`. The `<list>` can be a list of numbers, strings, or files. The `<block of code>` is the set of codes you want to execute for each item in the `<list>`.
 
 
 ## How do loops work?
