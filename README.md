@@ -6,11 +6,11 @@
 
   
 - To write for loops to execute one or more commands.
-<details>
-  <summary>•</summary>
+  <details>
+    <summary>•</summary>
 
-  - To demonstrate the fundamentals and encourage you all to explore more.
-</details>
+    - To demonstrate the fundamentals and encourage you all to explore more.
+  </details>
 
 Loops are a programming construct that allows us to execute a block of code repeatedly over multiple items. Most languages have the concept of loops and they help us to automate repetitive tasks so that we don't have to type in the code multiple times.
 
