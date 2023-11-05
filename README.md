@@ -4,7 +4,7 @@
 
 - Understand the concept of Loops in shell scripting.
 
-- Learn how to automate tasks using for loops.
+- Learn how to automate tasks using `For loop`.
   
 - Explore the fundamentals and encourage further exploration.
 
@@ -44,14 +44,26 @@ done
 - The list  includes numbers 1, 2, 3, and 4.
 - The block of code prints each number using `echo`.
 
-In this example, we have this for loop written in multiple lines with some indentation for readability however it can also be written in a single line or without indentation. You might notice that when you start for loop and press enter after the first line, the second line starts with the `>` sign rather than the regular command prompt `$`. This simply means that the shell is awaiting further commands to complete it. 
+In this example, we have this for loop written in multiple lines with some indentation for readability however it can also be written in a single line or without indentation. You might notice that when you start for loop and press enter after the first line, the second line starts with the `>` sign rather than the regular command prompt `$`. This simply means that the shell is awaiting further commands to complete it.
+
 ---
 
-## **Challenge 1**
-Expand the block of code in the above for loop to echo the numbers ` 1-4`, adding a 1-second delay in each iteration.
+Expanding the block of code with more commands.
+
+```bash
+for numbers in {1..4}
+  do
+    echo $numbers
+    sleep 1
+done
+```
+
+Let's expand the block of code in the above example to execute more commands.
+use the `sleep` command to add 1 second delay in each iteration.
 
 <details>
-    <summary>::::Hint::::</summary>
+    <summary>::::sleep command::::</summary>
+
 
 `sleep` command suspends execution for an interval of time.
 
@@ -61,46 +73,54 @@ eg. `sleep 1` for 1 second delay.
 
 </details>
 
-<details>
-    <summary>::::Solution::::</summary>
 
-```bash
-for numbers in 1 2 3 4
-do
-    echo $numbers
-    sleep 1
-done
-```
-</details>
+`variable names` can be anything, you don't have to use `numbers` as a variable name for `1 2 3 4` as in the above two examples. You can replace this variable name: `numbers` with anything, eg: `x` or `i` or any other random letters, words, or even numbers. However, having a meaningful variable name will increase the interpretability of the codes.
 
+## Challenge 1
 
-Note: `variable names` can be anything, you don't have to use `numbers` as a variable name for `1 2 3 4` as in the above two examples. You can replace this variable name: `numbers` with anything, eg: `x` or `i` or any other random letters, words, or even numbers. However, having a meaningful variable name will increase the interpretability of the codes.
-
+Change the <variable name> in the above loop and see if it works differently. 
 
 ---
 
 ## Examples
-1. Create empty files using the `touch` command.
+1. Create 50 empty files using the `touch` command.
 
 ```bash
-for numbers in 1 2 3 4             # for numbers in {1..4} does the same job
-do
+touch {1..50}.txt
+```
+Type `ls` to display the output.
+
+## Challenge 2
+Use `touch` with `for loop` to create 50 more text files `{51..100}.txt`
+
+<details>
+    <summary>::::Solution::::</summary>
+
+```bash
+for numbers in {51..100}
+  do
     touch ${numbers}.txt
 done
 ```
-You can type `ls` to display the output of the above `for loop`.
+
+</details>
+
+
+`ls` to display the output from the above `for loop`.
 
 
 2. Write text to files using the `echo` command.
 
 
 ```bash
-for files in 1.txt 2.txt 3.txt 4.txt
+for files in *.txt               # using wild card * with .txt points to every file in the directory that ends with .txt
 do
     echo "This is a textfile $files" > $files
 done
 ```
+
 You can use the `less` command to read the text file.
+
 ---
 
 
