@@ -17,7 +17,7 @@ Loops are a programming construct that allows us to execute a block of code repe
 ---
 ## Syntax of For loop
 
-The structure or the syntax of for loop in bash is as follows:
+The structure of for loop in bash is as follows:
 
 ```bash
 for <variable> in <list>
