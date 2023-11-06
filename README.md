@@ -112,17 +112,11 @@ Use `ls` to display the output from the above `for` loop.
 
 
 ### 2. Setting up a scenario-1.
-Suppose you are a PI in your lab, and you have 5 new graduate students this year: Allison, Jeff, Sam, Eunji, and Oskar. You want to set up a folder for each of your students to share files between you two. You also want to create a text file `Meeting_notes.txt` inside each of your students' folders to record your meeting agendas and notes. Create a folder `students` on your desktop and prepare the file system inside that using the `for` loop.
+Suppose you are a Principal Investigator (PI) in your lab, and you have five new graduate students this year: `Allison, Jeff, Sam, Eunji, and Oskar`. You want to set up a folder for each of your students to share files between the two of you. You also want to create a text file, `Meeting_notes.txt` inside each of your students' folders to record your meeting agendas and notes. Create a folder named `students` on your desktop and prepare the file system inside it using a for loop.
 
 Commands you will be using: `mkdir` and `touch`.
 
-<details>
-    <summary>::::Hints::::</summary>
-  
-wild card `*.txt` can specify all files that end with .txt on the working directory.
-
-
-</details>    
+ 
 
 ```bash
 for students in Allison Jeff Sam Eunji Oskar
@@ -174,6 +168,14 @@ Now insert the following sequences into each file using the `for` loop. You can 
 ```bash
 >Sequence1\nACGTAGCTAGCTAGCTAGCTAGCTTAGCTAGCTAGAGCTAGCTAGCTGCTAGCT\n>Sequence2\nGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCAGCTAGCTTAGCTAGGCAGCTAGA\n>Sequence3\nTAGCTAGCTAGCTAGCTAGCTATAGCTAGCTAGCTCTAGCTAGCTAGCTGCTGT
 ```
+
+<details>
+    <summary>::::Hints::::</summary>
+  
+wild card `*.fasta` can specify all the files that end with .fasta inside the working directory.
+
+</details>   
+
 
 <details>
     <summary>::::Solution::::</summary>
