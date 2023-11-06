@@ -44,11 +44,27 @@ done
 - The list  includes numbers 1, 2, 3, and 4.
 - The block of code prints each number using `echo`.
 
-In this example, we have this for loop written in multiple lines with some indentation for readability however it can also be written in a single line or without indentation. You might notice that when you start for loop and press enter after the first line, the second line starts with the `>` sign rather than the regular command prompt `$`. This simply means that the shell is awaiting further commands to complete it.
+In this example, we have this for loop written in multiple lines with some indentation for readability, however, it can also be written in a single line or without indentation. You might notice that when you start a For loop and press enter after the first line, the second line starts with the `>` sign instead of the regular command prompt `$` or `%`. This `>` simply means that the shell is awaiting further commands to complete it.
 
 ---
 
-Expanding the block of code with more commands.
+*Expanding the block of code with more commands.*
+
+Let's expand the block of code in the above example to execute more commands.
+This time we will use the `sleep` command to add 1 second delay in each iteration.
+
+<details>
+    <summary>::::sleep command::::</summary>
+
+
+`sleep` command suspends execution for an interval of time.
+
+usage: sleep [seconds] 
+
+eg. `sleep 1` for 1 second delay.
+
+</details>
+
 
 ```bash
 for numbers in {1..4}
@@ -58,22 +74,7 @@ for numbers in {1..4}
 done
 ```
 
-Let's expand the block of code in the above example to execute more commands.
-use the `sleep` command to add 1 second delay in each iteration.
-
-<details>
-    <summary>::::sleep command::::</summary>
-
-
-`sleep` command suspends execution for an interval of time.
-
-usage: sleep [seconds]
-
-eg. `sleep 1` for 1 second delay.
-
-</details>
-
-
+**Note:**
 `variable names` can be anything, you don't have to use `numbers` as a variable name for `1 2 3 4` as in the above two examples. You can replace this variable name: `numbers` with anything, eg: `x` or `i` or any other random letters, words, or even numbers. However, having a meaningful variable name will increase the interpretability of the codes.
 
 ## Challenge 1
@@ -88,6 +89,7 @@ Change the <variable name> in the above loop and see if it works differently.
 ```bash
 touch {1..50}.txt
 ```
+
 Type `ls` to display the output.
 
 ## Challenge 2
