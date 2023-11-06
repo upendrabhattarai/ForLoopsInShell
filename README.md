@@ -84,7 +84,7 @@ Change the <variable name> in the above loop and see if it works differently.
 ---
 
 ## Examples
-1. Create 50 empty files using the `touch` command.
+*1. Create 50 empty files using the `touch` command.*
 
 ```bash
 touch {1..50}.txt
@@ -111,7 +111,7 @@ done
 `ls` to display the output from the above `for loop`.
 
 
-2. Write text to files using the `echo` command.
+*2. Write text to files using the `echo` command.*
 
 
 ```bash
