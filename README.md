@@ -77,29 +77,26 @@ done
 **Note:**
 `variable names` can be anything, you don't have to use `numbers` as a variable name for `1 2 3 4` as in the above two examples. You can replace this variable name: `numbers` with anything, eg: `x` or `i` or any other random letters, words, or even numbers. However, having a meaningful variable name will increase the interpretability of the codes.
 
-## Challenge 1
-
-Change the <variable name> in the above loop and see if it works differently. 
 
 ---
 
 ## Examples
-*1. Create 50 empty files using the `touch` command.*
+*1. Create 10 empty files using the `touch` command.*
 
 ```bash
-touch {1..50}.txt
+touch {1..10}.txt
 ```
 
 Type `ls` to display the output.
 
 ## Challenge 2
-Use `touch` with `for loop` to create 50 more text files `{51..100}.txt`
+Use `touch` with `for loop` to create 10 more text files `{11..20}.txt`
 
 <details>
     <summary>::::Solution::::</summary>
 
 ```bash
-for numbers in {51..100}
+for numbers in {11..20}
   do
     touch ${numbers}.txt
 done
